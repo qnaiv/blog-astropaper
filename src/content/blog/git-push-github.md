@@ -1,16 +1,16 @@
 ---
 tags:
-- github
+  - github
 featuredimg: "/github.png"
 title: git push 時のコミッター名が Github アカウントと一致しない問題
 description: ""
 pubDatetime: 2019-09-15T15:00:00.000+09:00
 summary: Github にgit pushする際、Github のアカウント名義でコミットするのに手間取ったのでメモ。
-
 ---
+
 Github に`git push`する際、Github のアカウント名義でコミットするのに手間取ったのでメモ。
 
-![](/assets/img/change-git-committer1.png)
+![](@assets/images/change-git-committer1.png)
 
 ## git config でメールアドレスを設定する
 
@@ -32,13 +32,13 @@ Github でメールアドレスを…
 
 **公開状態にしている場合**
 
-* Github に登録したメールアドレスをそのまま設定する。
+- Github に登録したメールアドレスをそのまま設定する。
 
 **非公開状態にしている場合**
 
-* noreply メールアドレスを設定する。
+- noreply メールアドレスを設定する。
 
 ## noreply メールアドレスの確認方法
 
 **Keep my email addressses private**(メールアドレスを非公開にする)にチェックがついている場合、赤枠で囲んだ部分に書かれているメールアドレスを`user.email`に設定する必要がある。
-![](/assets/img/change-git-committer2.png)
+![](@assets/images/change-git-committer2.png)

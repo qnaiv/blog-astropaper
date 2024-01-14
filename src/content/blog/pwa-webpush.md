@@ -1,14 +1,14 @@
 ---
 tags:
-- firebase
-- pwa
+  - firebase
+  - pwa
 featuredimg: "/fcm.png"
 title: PWA の WebPush 機能を試した
 description: ""
 pubDatetime: 2020-02-03T00:00:00.000+09:00
 summary: firebaseでweb push飛ばすハンズオン
-
 ---
+
 仕事でプッシュ通知について調査する機会があったのでメモ。
 
 ## Firebase 導入
@@ -67,7 +67,7 @@ public ディレクトリに`index.html` を作成。
       };
       const VAPID =
         "公開鍵";
-    
+
       // firebaseの初期化
       firebase.initializeApp(firebaseConfig);
       // 通知を許可をユーザに求める
@@ -80,7 +80,7 @@ public ディレクトリに`index.html` を作成。
           const messaging = firebase.messaging();
           // 公開鍵を設定
           messaging.usePublicVapidKey(VAPID);
-    
+
         // トークン取得
           messaging.getToken().then(currentToken => {
               // デバイストークンがコンソールに出力される。
@@ -96,7 +96,7 @@ importScripts("https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js");
 importScripts("https://www.gstatic.com/firebasejs/6.2.4/firebase-messaging.js");
 
 firebase.initializeApp({
-  messagingSenderId: "***"
+  messagingSenderId: "***",
 });
 
 const messaging = firebase.messaging();
@@ -113,16 +113,16 @@ firebase deploy
 ### 手動でデバイスに通知を送る
 
 "Send your first message"をクリック
-![](/assets/img/web-push-hands-on-1.png)
+![](@assets/images/web-push-hands-on-1.png)
 
 タイトルとテキストを入力して"テストメッセージを送信"をクリック。
-![](/assets/img/web-push-hands-on-2.png)
+![](@assets/images/web-push-hands-on-2.png)
 
 先ほどコンソールに出ていたトークンをコピペする。
-![](/assets/img/web-push-hands-on-3.png)
+![](@assets/images/web-push-hands-on-3.png)
 
 通知が表示される。
-![](/assets/img/web-push-hands-on-4.png)
+![](@assets/images/web-push-hands-on-4.png)
 
 ## firebase-messaging-sw.js について
 

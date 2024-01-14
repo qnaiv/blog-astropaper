@@ -1,13 +1,13 @@
 ---
 tags:
-- javascript
+  - javascript
 featuredimg: "/javascript.png"
 title: jsの変数の中身をクリップボードにコピーする
 description: ""
 pubDatetime: 2020-11-10T00:00:00.000+09:00
 summary: chromeの開発者ツールでjsの変数の中身をコピーする方法
-
 ---
+
 ## このページでわかること
 
 Chromeの開発者ツールにコンソールを使って、console.logで出力した値や、デバッグ中の値をクリップボードにまるごとコピーする方法。
@@ -20,9 +20,9 @@ APIのレスポンスのjsonをコピーしてどこかに貼り付けたい時�
 
 1. 開発者ツールのコンソールで値を右クリックし、`Store as global variable`をクリックする。
 
-![](/assets/img/screenshot-2020-11-10-at-23-00-35.png)2. copy(変数名)と入力して実行。
+![](@assets/images/screenshot-2020-11-10-at-23-00-35.png)2. copy(変数名)と入力して実行。
 
-![](/assets/img/screenshot-2020-11-10-at-23-02-33.png)
+![](@assets/images/screenshot-2020-11-10-at-23-02-33.png)
 
 undefinedと表示されるが、クリップボードに値がコピーされている。
 
@@ -37,7 +37,8 @@ undefinedと表示されるが、クリップボードに値がコピーされ�
 
 1. 開発者ツールのソースタブでブレークポイントを貼り、jsを実行する。
 
-   ![](/assets/img/screenshot-2020-11-10-at-23-09-07.png)
+   ![](@assets/images/screenshot-2020-11-10-at-23-09-07.png)
+
 2. copy(変数名)と入力して実行。
 
 これで途中の状態を丸コピできる。

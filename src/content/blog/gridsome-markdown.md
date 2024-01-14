@@ -1,14 +1,14 @@
 ---
 tags:
-- ssg
-- gridsome
+  - ssg
+  - gridsome
 featuredimg: "/20200716-lunchbox-feature-image.png"
 title: gridsomeで日本語ファイル名のmarkdownを認識できるようにする
 description: ""
 pubDatetime: 2020-08-01T00:00:00.000+09:00
 summary: gridsomeで日本語ファイル名のmdをスキャンさせたらpathがおかしくなった
-
 ---
+
 # 現象
 
 日本語ファイル名のmarkdown(.md)ファイルを複数個用意して、`@gridsome/source-filesystem`を使ってスキャンさせようとした。
@@ -36,7 +36,7 @@ gridsome.config.jsの設定は以下のような感じ。
 
 そしてURLが/projects/で終わってしまっている。(記事ごとにユニークなURLになってない。)
 
-![](/assets/img/screenshot-2020-08-01-at-13-48-08-display-1.png)
+![](@assets/images/screenshot-2020-08-01-at-13-48-08-display-1.png)
 
 # 結論
 
@@ -53,7 +53,7 @@ gridsome.config.js
 
 URLがユニークになって、すべての記事が画面上に表示されるようになった。
 
-![](/assets/img/screenshot-2020-08-01-at-13-51-18-display-1.png)
+![](@assets/images/screenshot-2020-08-01-at-13-51-18-display-1.png)
 
 # 原因
 

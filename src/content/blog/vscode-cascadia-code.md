@@ -1,13 +1,13 @@
 ---
 tags:
-- vscode
+  - vscode
 featuredimg: "/vscode.png"
 title: VSCode で Cascadia code を利用する
 description: ""
 pubDatetime: 2019-09-23T00:00:00.000+09:00
 summary: ターミナルやコードエディタに最適なフォントをVSCodeに導入。
-
 ---
+
 Microsoft が 9 月 18 日に発表したターミナル/コードエディタに最適化されたフォント「Cascadia code」を VS Code に導入してみた。
 
 [https://devblogs.microsoft.com/commandline/cascadia-code/](https://devblogs.microsoft.com/commandline/cascadia-code/)
@@ -25,12 +25,12 @@ Microsoft が 9 月 18 日に発表したターミナル/コードエディタ�
 
 ### 3. VSCode の設定を変更
 
-![](/assets/img/cascadia-code-vscode-1.png)
+![](@assets/images/cascadia-code-vscode-1.png)
 
-* `Font Family`に\`Cascadia Code\`を追加。
-* `Font Lignatures`の`フォントの合字を有効/無効にします。`にチェックを入れる。
+- `Font Family`に\`Cascadia Code\`を追加。
+- `Font Lignatures`の`フォントの合字を有効/無効にします。`にチェックを入れる。
 
 完了。
 
 こんな感じで合字で表示されるようになる。
-![](/assets/img/cascadia-code-vscode-2.png)
+![](@assets/images/cascadia-code-vscode-2.png)

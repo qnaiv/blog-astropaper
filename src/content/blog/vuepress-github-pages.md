@@ -1,23 +1,23 @@
 ---
 tags:
-- vuepress
-- github pages
+  - vuepress
+  - github pages
 title: vuepressで作った静的サイトをGithub pagesで公開するまで
 description: ""
 pubDatetime: 2019-06-14T15:00:00.000+00:00
 featuredimg: "/vuepress.png"
 summary: vuepress + github pages。自動デプロイについては別記事。
-
 ---
+
 ## このページで分かること
 
-* 1からvuepressの導入する方法・基本的な使い方
-* Github pagesで静的サイトを公開する方法
+- 1からvuepressの導入する方法・基本的な使い方
+- Github pagesで静的サイトを公開する方法
 
 ## 前提条件
 
-* nodejsを導入する
-* githubにリポジトリを用意する
+- nodejsを導入する
+- githubにリポジトリを用意する
 
 ## vuepressを導入する
 
@@ -42,8 +42,9 @@ mkdir .vuepress
 プロジェクトルートに`index.md`を作成する。
 index.md
 
-``` md
+```md
 # Hello Vuepress!
+
 Top page.
 ```
 
@@ -64,17 +65,17 @@ Top page.
 
 ```js
 module.exports = {
-    // サイト名
-    title: "Vuepress introduction",
-    
-    // githubのリポジトリ名を指定する。カスタムドメインを使う場合は不要。
-    base: '/vuepress-introduction',
-    
-    // markdown: {
-    //   // ソースコードに行数を表示する。
-    //   lineNumbers: true
-    // }
-}
+  // サイト名
+  title: "Vuepress introduction",
+
+  // githubのリポジトリ名を指定する。カスタムドメインを使う場合は不要。
+  base: "/vuepress-introduction",
+
+  // markdown: {
+  //   // ソースコードに行数を表示する。
+  //   lineNumbers: true
+  // }
+};
 ```
 
 ### 5. 動作確認
@@ -87,16 +88,16 @@ module.exports = {
 
 ### 1. gh-pagesリポジトリを作成する
 
-![](/assets/img/vuepress-introduction-1.png)
+![](@assets/images/vuepress-introduction-1.png)
 
 ### 2. リポジトリの設定を変更する
 
 githubリポジトリの設定ページでsourceを`gh-pages branch`にする。
-![](/assets/img/vuepress-introduction-2.png)
+![](@assets/images/vuepress-introduction-2.png)
 
 ### 3. ビルドしてgh-pagesリポジトリにpushする
 
-``` sh
+```sh
 npm run build
 
 cd .vuepress/dist

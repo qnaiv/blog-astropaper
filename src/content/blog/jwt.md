@@ -1,13 +1,13 @@
 ---
 tags:
-- jwt
+  - jwt
 featuredimg: "/jwt.png"
 title: JWT についてまとめ
 description: ""
 pubDatetime: 2019-09-07T15:00:00.000+09:00
 summary: JWTについてわかったことメモ
-
 ---
+
 仕事で初めて JWT に触れる機会があったので、まとめる。
 
 ## JWT(Json Web Token)とは
@@ -22,7 +22,7 @@ summary: JWTについてわかったことメモ
 
 ログインしてからプライベート API を実行するシンプルなケース。
 
-![](/assets/img/jwt-introduction-1-97138c8a-beae-4774-ac49-d038425739e5.png)
+![](@assets/images/jwt-introduction-1-97138c8a-beae-4774-ac49-d038425739e5.png)
 
 ## JWT を触ってみる
 
@@ -34,44 +34,49 @@ summary: JWTについてわかったことメモ
 
 以下の手順で JWT を生成することができる。
 
-![](/assets/img/jwt-introduction-2-585aa0e0-8479-4f5e-8724-27756f782341.png)
+![](@assets/images/jwt-introduction-2-585aa0e0-8479-4f5e-8724-27756f782341.png)
 
 ### ②JWT を検証してみる
 
 不正な JWT を生成し、検証する。
 
-![](/assets/img/jwt-introduction-3-91af68e8-f0fd-414f-81c8-94bf85d1525c.png)
+![](@assets/images/jwt-introduction-3-91af68e8-f0fd-414f-81c8-94bf85d1525c.png)
 
 ## 構造
 
 JWT は HEADER, PAYLOAD, SIGNATURE の 3 つの要素で構成され、「.(ピリオド)」で区切られている。
 
-![](/assets/img/jwt-introduction-4-6d8dce6d-e682-414b-9330-d5d074cd301e.png)
+![](@assets/images/jwt-introduction-4-6d8dce6d-e682-414b-9330-d5d074cd301e.png)
 
 1. HEADER
-   * 署名生成のアルゴリズムを格納する。
+
+   - 署名生成のアルゴリズムを格納する。
 
      {
      "alg" : "HS256",
      "typ" : "JWT"
      }
+
 2. PAYLOAD
-   * ログインしているユーザの ID や権限など、サーバサイドに受け渡したい情報を格納する。
-   * PAYLOAD には好きな情報を入れられるが、RFC 標準で定義されている項目もある。
+
+   - ログインしているユーザの ID や権限など、サーバサイドに受け渡したい情報を格納する。
+   - PAYLOAD には好きな情報を入れられるが、RFC 標準で定義されている項目もある。
 
      標準で定義されている PAYLOAD 項目(一部)
 
-     | 項目名 | 用途 |
-     | --- | --- |
-     | iss | 発行者の識別子 |
-     | sub | ユーザ識別子。ログインしたユーザの ID などを入れる。 |
-     | exp | トークンの有効期限 |
-     | iat | トークン発行日時 |
-   * **※PAYLOAD は暗号化されておらず、JWT を盗聴されると簡単に中身を確認可能なのでパスワード等の情報は入れないこと。**
+     | 項目名 | 用途                                                 |
+     | ------ | ---------------------------------------------------- |
+     | iss    | 発行者の識別子                                       |
+     | sub    | ユーザ識別子。ログインしたユーザの ID などを入れる。 |
+     | exp    | トークンの有効期限                                   |
+     | iat    | トークン発行日時                                     |
 
-     ![](/assets/img/jwt-introduction-4-79083ea9-7059-426a-81c4-2976ea7f9742.png)
+   - **※PAYLOAD は暗号化されておらず、JWT を盗聴されると簡単に中身を確認可能なのでパスワード等の情報は入れないこと。**
+
+     ![](@assets/images/jwt-introduction-4-79083ea9-7059-426a-81c4-2976ea7f9742.png)
+
 3. VERIFY SIGNATURE
-   * 署名情報を格納する。
+   - 署名情報を格納する。
 
 ## メリット
 
