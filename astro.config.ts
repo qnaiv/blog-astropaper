@@ -10,7 +10,7 @@ import { SITE } from "./src/config";
 export default defineConfig({
   site: "https://qnaiv.github.io",
   base: "/blog-astropaper",
-  outDir: "./docs",
+  // outDir: "./docs",
   integrations: [
     tailwind({
       applyBaseStyles: false,
